@@ -1,1 +1,2 @@
 - Vite-Vue-TypeScript 模板 分支: vite-vue-ts
+- Vite-React-TypeScript 模板 分支：vite-react-ts
