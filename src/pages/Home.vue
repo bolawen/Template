@@ -1,34 +1,32 @@
 <template>
-    <h3>欢迎光临！</h3>
+    <h1>柏拉文模板</h1>
     <div>
-        <img src="../assets/images/girl.jpg" alt="" />
-        <button @click="handleClickMe">点击我！{{ count }}次</button>
-        <p>为人进出的门紧锁着，为狗爬出的洞敞开着。一个声音高叫着，爬出来吧，给你自由。我渴望自由！啊啊啊！啊啊啊啊</p>
+        <img src="../assets/images/avatar.png" alt="" />
+    </div>
+    <div>
+        <h1>功能特色</h1>
+        <ul>
+            <li>基于 Vue3.0</li>
+            <li>基于 TypeScript</li>
+            <li>基于 Webpack 5.0</li>
+            <li>两套 axios 封装方案</li>
+            <li>Eslint 与 Prettier 相结合的工业级代码规范</li>
+        </ul>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
-    name: '',
-    setup() {
-        const name: string = '柏拉文';
-        console.log(name);
-
-        const count = ref(0);
-        onMounted(async () => {
-            console.log('kjkj');
-        });
-        const handleClickMe = () => {
-            count.value++;
-        };
-        return {
-            count,
-            handleClickMe,
-        };
-    },
+    name: 'Home',
+    setup() {},
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+img {
+    width: 400px;
+    height: 400px;
+}
+</style>

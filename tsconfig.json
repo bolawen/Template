@@ -11,14 +11,32 @@
       "esModuleInterop": true,
       "allowSyntheticDefaultImports": true,
       "sourceMap": true,
-      "baseUrl": ".",
+      "baseUrl": "./",
       "types": [
         "webpack-env"
       ],
       "paths": {
         "@/*": [
           "src/*"
-        ]
+        ],
+        "js/*":[
+          "src/assets/js/*"
+        ],
+        "api/*":[
+          "src/api/*"
+        ],
+        "css/*":[
+          "src/assets/css/*"
+        ],
+        "scss/*":[
+          "src/assets/scss/*"
+        ],
+        "utils/*":[
+          "src/utils/*"
+        ],
+        "assets/*":[
+          "src/assets/*"
+        ],
       },
       "lib": [
         "esnext",
@@ -28,11 +46,11 @@
       ]
     },
     "include": [
+      "src/**/*.js",
       "src/**/*.ts",
+      "src/**/*.jsx",
       "src/**/*.tsx",
       "src/**/*.vue",
-      "tests/**/*.ts",
-      "tests/**/*.tsx"
     ],
     "exclude": [
       "node_modules"

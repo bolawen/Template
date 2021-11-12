@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/didi/.nvm/versions/node/v15.14.0/bin/node /Users/didi/.nvm/versions/node/v15.14.0/bin/yarn dev
+  /Users/didi/.nvm/versions/node/v15.14.0/bin/node /Users/didi/.nvm/versions/node/v15.14.0/bin/yarn add dotnv -D
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/didi/.nvm/versions/node/v15.14.0/bin
@@ -14,18 +14,23 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/didi/Desktop/bolawen/Template/package.json: Unexpected token y in JSON at position 1385
-      at JSON.parse (<anonymous>)
-      at /Users/didi/.nvm/versions/node/v15.14.0/lib/node_modules/yarn/lib/cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (/Users/didi/.nvm/versions/node/v15.14.0/lib/node_modules/yarn/lib/cli.js:310:30)
-      at /Users/didi/.nvm/versions/node/v15.14.0/lib/node_modules/yarn/lib/cli.js:321:13
+  Error: https://registry.yarnpkg.com/dotnv: Not found
+      at Request.params.callback [as _callback] (/Users/didi/.nvm/versions/node/v15.14.0/lib/node_modules/yarn/lib/cli.js:66988:18)
+      at Request.self.callback (/Users/didi/.nvm/versions/node/v15.14.0/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (node:events:369:20)
+      at Request.<anonymous> (/Users/didi/.nvm/versions/node/v15.14.0/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (node:events:369:20)
+      at IncomingMessage.<anonymous> (/Users/didi/.nvm/versions/node/v15.14.0/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (node:events:475:28)
+      at IncomingMessage.emit (node:events:381:22)
+      at endReadableNT (node:internal/streams/readable:1307:12)
+      at processTicksAndRejections (node:internal/process/task_queues:81:21)
 
 npm manifest: 
   {
     "scripts": {
-      "dev": "webpack serve --progress --config ./config/webpack.dev.js",
-      "prod": "webpack --config ./config/webpack.prod.js"
+      "dev": "cross-env NODE_ENV=development webpack serve --progress --config ./config/webpack.dev.js",
+      "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js"
     },
     "devDependencies": {
       "@babel/core": "^7.16.0",
@@ -39,6 +44,7 @@ npm manifest:
       "@vue/eslint-config-typescript": "7.0.0",
       "babel-loader": "^8.2.3",
       "clean-webpack-plugin": "^4.0.0",
+      "cross-env": "^7.0.3",
       "css-loader": "^6.5.1",
       "eslint": "7.5.0",
       "eslint-config-airbnb-typescript": "12.3.1",
@@ -56,15 +62,17 @@ npm manifest:
       "sass-loader": "^12.3.0",
       "style-loader": "^3.3.1",
       "ts-loader": "^9.2.6",
-      "typescript": "^4.4.0",
+      "typescript": "^4.3.0",
       "vue-loader": "^16.8.3",
       "webpack": "^5.63.0",
       "webpack-cli": "^4.9.1",
       "webpack-dev-server": "^4.4.0",
       "webpack-merge": "^5.8.0"
-    },yarn
+    },
     "dependencies": {
-      "vue": "^3.2.21"
+      "vue": "^3.2.21",
+      "vue-router": "^4.0.12",
+      "vuex": "^4.0.2"
     }
   }
 
@@ -1306,6 +1314,11 @@ Lockfile:
       "@vue/compiler-dom" "3.2.21"
       "@vue/shared" "3.2.21"
   
+  "@vue/devtools-api@^6.0.0-beta.11", "@vue/devtools-api@^6.0.0-beta.18":
+    version "6.0.0-beta.20.1"
+    resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.0.0-beta.20.1.tgz#5b499647e929c35baf2a66a399578f9aa4601142"
+    integrity sha512-R2rfiRY+kZugzWh9ZyITaovx+jpU4vgivAEAiz80kvh3yviiTU3CBuGuyWpSwGz9/C7TkSWVM/FtQRGlZ16n8Q==
+  
   "@vue/eslint-config-prettier@6.0.0":
     version "6.0.0"
     resolved "https://registry.yarnpkg.com/@vue/eslint-config-prettier/-/eslint-config-prettier-6.0.0.tgz#ad5912b308f4ae468458e02a2b05db0b9d246700"
@@ -2079,7 +2092,14 @@ Lockfile:
       path-type "^4.0.0"
       yaml "^1.10.0"
   
-  cross-spawn@^7.0.2, cross-spawn@^7.0.3:
+  cross-env@^7.0.3:
+    version "7.0.3"
+    resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
+    integrity sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==
+    dependencies:
+      cross-spawn "^7.0.1"
+  
+  cross-spawn@^7.0.1, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
     version "7.0.3"
     resolved "http://registry.npm.xiaojukeji.com/cross-spawn/download/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
     integrity sha1-9zqFudXUHQRVUcF34ogtSshXKKY=
@@ -5087,7 +5107,7 @@ Lockfile:
       media-typer "0.3.0"
       mime-types "~2.1.24"
   
-  typescript@^4.4.0:
+  typescript@^4.3.0:
     version "4.4.4"
     resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.4.tgz#2cd01a1a1f160704d3101fd5a58ff0f9fcb8030c"
     integrity sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==
@@ -5205,6 +5225,13 @@ Lockfile:
       hash-sum "^2.0.0"
       loader-utils "^2.0.0"
   
+  vue-router@^4.0.12:
+    version "4.0.12"
+    resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.12.tgz#8dc792cddf5bb1abcc3908f9064136de7e13c460"
+    integrity sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==
+    dependencies:
+      "@vue/devtools-api" "^6.0.0-beta.18"
+  
   vue@^3.2.21:
     version "3.2.21"
     resolved "http://registry.npm.xiaojukeji.com/vue/download/vue-3.2.21.tgz#55f5665172d95cf97e806b9aad0a375180be23a1"
@@ -5215,6 +5242,13 @@ Lockfile:
       "@vue/runtime-dom" "3.2.21"
       "@vue/server-renderer" "3.2.21"
       "@vue/shared" "3.2.21"
+  
+  vuex@^4.0.2:
+    version "4.0.2"
+    resolved "https://registry.yarnpkg.com/vuex/-/vuex-4.0.2.tgz#f896dbd5bf2a0e963f00c67e9b610de749ccacc9"
+    integrity sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q==
+    dependencies:
+      "@vue/devtools-api" "^6.0.0-beta.11"
   
   watchpack@^2.2.0:
     version "2.2.0"
