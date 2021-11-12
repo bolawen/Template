@@ -25,6 +25,8 @@ module.exports = {
             "scss": Path.resolve(process.cwd(), './src/assets/scss'),
             "utils": Path.resolve(process.cwd(), './src/utils'),
             "images": Path.resolve(process.cwd(), './src/assets/images'),
+            "assets": Path.resolve(process.cwd(), './src/assets'),
+            "styles": Path.resolve(process.cwd(), './src/styles'),
         },
         extensions: ['.vue', '.js', '.ts'],
     },

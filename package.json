@@ -45,6 +45,7 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/lodash": "^4.14.176",
+    "@vue/compiler-sfc": "^3.2.21",
     "axios": "^0.24.0",
     "lodash": "^4.17.21",
     "vue": "^3.2.21",

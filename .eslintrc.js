@@ -54,6 +54,8 @@ module.exports = {
                     ['scss', './src/assets/scss/'],
                     ['utils', './src/utils/'],
                     ['assets', './src/store/'],
+                    ['images', './src/assets/images/'],
+                    ['styles', './src/styles/'],
                 ],
                 extensions: ['.ts', '.js', '.jsx', '.json', '.scss'],
             },

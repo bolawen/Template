@@ -1,59 +1,31 @@
 {
     "compilerOptions": {
-      "target": "esnext",
-      "module": "esnext",
-      "strict": false,
-      "jsx": "preserve",
-      "importHelpers": true,
-      "moduleResolution": "node",
-      "experimentalDecorators": true,
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "sourceMap": true,
-      "baseUrl": "./",
-      "types": [
-        "webpack-env"
-      ],
-      "paths": {
-        "@/*": [
-          "src/*"
-        ],
-        "js/*":[
-          "src/assets/js/*"
-        ],
-        "api/*":[
-          "src/api/*"
-        ],
-        "css/*":[
-          "src/assets/css/*"
-        ],
-        "scss/*":[
-          "src/assets/scss/*"
-        ],
-        "utils/*":[
-          "src/utils/*"
-        ],
-        "assets/*":[
-          "src/assets/*"
-        ],
-      },
-      "lib": [
-        "esnext",
-        "dom",
-        "dom.iterable",
-        "scripthost"
-      ]
+        "target": "esnext",
+        "module": "esnext",
+        "strict": false,
+        "jsx": "preserve",
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "baseUrl": "./",
+        "types": ["webpack-env"],
+        "paths": {
+            "@/*": ["src/*"],
+            "js/*": ["src/assets/js/*"],
+            "api/*": ["src/api/*"],
+            "css/*": ["src/assets/css/*"],
+            "scss/*": ["src/assets/scss/*"],
+            "utils/*": ["src/utils/*"],
+            "assets/*": ["src/assets/*"],
+            "images/*": ["src/assets/images/*"],
+            "styles/*": ["src/styles/*"]
+        },
+        "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
     },
-    "include": [
-      "src/**/*.js",
-      "src/**/*.ts",
-      "src/**/*.jsx",
-      "src/**/*.tsx",
-      "src/**/*.vue",
-    ],
-    "exclude": [
-      "node_modules"
-    ]
-  }
-  
+    "include": ["src/**/*.js", "src/**/*.ts", "src/**/*.jsx", "src/**/*.tsx", "src/**/*.vue"],
+    "exclude": ["node_modules"]
+}
