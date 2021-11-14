@@ -11,19 +11,8 @@ export default defineComponent({
     name: 'App',
 });
 </script>
-<style scoped lang="sass">
-#app{
+<style lang="scss">
+#app {
     text-align: center;
-    h3{
-        margin-bottom:24px;
-    }
-    img{
-        width:200px;
-        height:100px;
-    }
-    button{
-        display:block;
-        margin:0 auto;
-    }
 }
 </style>
