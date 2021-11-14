@@ -18,6 +18,7 @@ module.exports = {
     rules:{
         "no-console":0,
         "no-plusplus":0,
+        "prettier/prettier":0,
         'import/extensions': [
             'error',
             {
