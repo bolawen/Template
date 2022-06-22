@@ -7,22 +7,18 @@
     "license": "MIT",
     "scripts": {
         "start": "vite",
+        "tsc": "tsc --noEmit",
         "build": "tsc && vite build",
         "lint-staged": "lint-staged",
-        "tsc": "tsc --noEmit",
-        "eslint-fix": "eslint --ext .jsx,.js,.ts,.tsx src/ --fix",
+        "postinstall": "husky install",
+        "commitlint": "commitlint -E HUSKY_GIT_PARAMS",
+        "prettier": "prettier --write src/**/*.{ts,tsx}",
         "stylelint-fix": "stylelint src/**/*.scss --fix",
-        "prettier": "prettier --write src/**/*.{ts,tsx}"
+        "eslint-fix": "eslint --ext .jsx,.js,.ts,.tsx src/ --fix"
     },
     "config": {
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
-        }
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged",
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     },
     "devDependencies": {
