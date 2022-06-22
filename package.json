@@ -21,6 +21,12 @@
             "path": "./node_modules/cz-conventional-changelog"
         }
     },
+    "husky": {
+        "hooks": {
+          "pre-commit": "lint-staged",
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
     "devDependencies": {
         "@commitlint/cli": "^16.2.4",
         "@commitlint/config-conventional": "^16.0.0",
