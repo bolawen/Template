@@ -9,6 +9,7 @@
         "start": "vite",
         "build": "tsc && vite build",
         "lint-staged": "lint-staged",
+        "tsc": "tsc --noEmit",
         "eslint-fix": "eslint --ext .jsx,.js,.ts,.tsx src/ --fix",
         "stylelint-fix": "stylelint src/**/*.scss --fix",
         "prettier": "prettier --write src/**/*.{ts,tsx}"

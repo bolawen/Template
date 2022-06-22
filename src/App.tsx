@@ -3,7 +3,7 @@ import logo from '@/assets/svg/logo.svg';
 
 function App() {
     const [title,setTitle] = useState<string>('Vite-React 模板');
-    const name:string = 200;
+    const name:string = 200
     const age:number = 'kkk';
     const num:number ='kkkk';
     return (
