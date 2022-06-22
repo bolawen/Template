@@ -1,17 +1,13 @@
 {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
     },
     "eslint.options": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".ts", ".tsx"]
     },
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "html",
-        "vue",
-        "typescript",
-        "typescriptreact"
-    ],
-    "stylelint.validate": ["css", "less", "scss", "vue"]
+    "eslint.validate": ["typescript", "typescriptreact"],
+    "stylelint.validate": ["css", "scss"]
 }

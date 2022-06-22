@@ -12,5 +12,4 @@ const generateTSConfig = (fileName, type) => {
 module.exports = {
     'src/**/*.{ts,tsx}': ['yarn prettier', 'yarn eslint-fix',(fileName) => generateTSConfig(fileName, 'tsc')],
     'src/**/*.{css,less,scss}': ['yarn stylelint-fix'],
-    // 'src/**/*.{ts,tsx}': [],
 };

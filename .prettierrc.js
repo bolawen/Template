@@ -12,10 +12,4 @@ module.exports = {
     trailingComma: 'all',
     tabWidth: 4,
     useTabs: false,
-    overrides: [
-        {
-            files: '.prettierrc',
-            options: {parser: 'typescript'},
-        },
-    ],
 };
