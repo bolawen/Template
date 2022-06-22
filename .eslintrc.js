@@ -18,7 +18,7 @@ module.exports = {
         'prettier',
         'plugin:react/recommended',
         'plugin:@typescript-eslint/eslint-recommended',
-        "plugin:react/jsx-runtime",
+        'plugin:react/jsx-runtime',
     ],
     plugins: [
         'react',
@@ -28,46 +28,66 @@ module.exports = {
         '@typescript-eslint',
     ],
     rules: {
+        semi: 2,
         'import/no-unresolved': [
             2,
             {
                 ignore: ['^@/'], // @ 是设置的路径别名
             },
         ],
-        'react/jsx-filename-extension': [1, { extensions: ['.js', '.tsx'] }],
-        '@typescript-eslint/no-unused-vars': 'off', // 是否禁止未使用的变量
-        '@typescript-eslint/no-var-requires': 'off', // 是否禁止在 import 语句之外使用 require 语句
-        '@typescript-eslint/explicit-module-boundary-types': 'off', // 是否要求导出函数和类的公共类方法的显式返回和参数类型
-        '@typescript-eslint/triple-slash-reference': 'off', // 是否禁止使用/// <reference path="" />，/// <reference types="" />或/// <reference lib="" />指令
-        'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-        semi: 2, // 分号 检测开关
-    },
-    settings: {
-        react:{
-            'import/resolver': {
-                node: {
-                    extensions: [
-                        '.js',
-                        '.ts',
-                        '.jsx',
-                        '.tsx',
-                        '.json',
-                        '.scss',
-                        '.less',
-                    ],
+        'import/extensions': [
+            'error',
+            {
+                ignorePackages: true,
+                pattern: {
+                    js: 'always',
+                    jsx: 'never',
+                    ts: 'never',
+                    tsx: 'never',
+                    scss: 'never',
+                    vue: 'always',
+                    png: 'always',
+                    jpg: 'always',
+                    svg:'always',
                 },
             },
-            'import/extensions': [
-                '.js',
-                '.ts',
-                '.jsx',
-                '.tsx',
-                '.json',
-                '.scss',
-                '.less',
-            ],
+        ],
+        'react/jsx-filename-extension': [1, {extensions: ['.js', '.tsx']}],
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/triple-slash-reference': 'off',
+        'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+        'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    },
+    settings: {
+        react: {
+            version: 'detect',
         },
-        
+        'import/resolver': {
+            node: {
+                extensions: [
+                    '.js',
+                    '.ts',
+                    '.jsx',
+                    '.tsx',
+                    '.json',
+                    '.scss',
+                    '.less',
+                ],
+            },
+        },
+        'import/extensions': [
+            '.js',
+            '.ts',
+            '.jsx',
+            '.tsx',
+            '.json',
+            '.scss',
+            '.less',
+        ],
+        'import/parsers': {
+            '@typescript-eslint/parser': ['.ts', '.tsx'],
+        },
     },
 };

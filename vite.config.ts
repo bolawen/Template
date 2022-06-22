@@ -1,5 +1,5 @@
-import Path from "path";
-import { defineConfig } from "vite";
+import Path from 'path';
+import {defineConfig} from 'vite';
 
 /**
  * @description: @vitejs/plugin-react
@@ -9,16 +9,24 @@ import { defineConfig } from "vite";
  *
  */
 
-import ReactPlugin from "@vitejs/plugin-react";
+import ReactPlugin from '@vitejs/plugin-react';
 
-export default ({ comman, code }) => {
-  return defineConfig({
-    plugins: [ReactPlugin()],
-    resolve: {
-      alias: {
-        "@": Path.resolve(__dirname, "src"),
-      },
-      extensions: [".js", ".ts", ".jsx", ".tsx", ".json", ".scss", ".less"],
-    },
-  });
+export default ({comman, code}) => {
+    return defineConfig({
+        plugins: [ReactPlugin()],
+        resolve: {
+            alias: {
+                '@': Path.resolve(__dirname, 'src'),
+            },
+            extensions: [
+                '.js',
+                '.ts',
+                '.jsx',
+                '.tsx',
+                '.json',
+                '.scss',
+                '.less',
+            ],
+        },
+    });
 };
