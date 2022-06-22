@@ -11,20 +11,14 @@
         "build": "tsc && vite build",
         "lint-staged": "lint-staged",
         "postinstall": "husky install",
-        "commitlint": "commitlint -E HUSKY_GIT_PARAMS",
         "prettier": "prettier --write src/**/*.{ts,tsx}",
         "stylelint-fix": "stylelint src/**/*.scss --fix",
-        "eslint-fix": "eslint --ext .jsx,.js,.ts,.tsx src/ --fix"
+        "eslint-fix": "eslint --ext .jsx,.js,.ts,.tsx src/ --fix",
+        "commitlint": "commitlint --config commitlint.config.js -e -V"
     },
     "config": {
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
-        }
-    },
-    "husky": {
-        "hooks": {
-          "pre-commit": "lint-staged",
-          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     },
     "devDependencies": {
