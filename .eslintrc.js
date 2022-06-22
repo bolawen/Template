@@ -29,6 +29,7 @@ module.exports = {
     ],
     rules: {
         semi: 2,
+        'no-unused-vars': 0,
         'import/no-unresolved': [
             2,
             {
@@ -48,12 +49,12 @@ module.exports = {
                     vue: 'always',
                     png: 'always',
                     jpg: 'always',
-                    svg:'always',
+                    svg: 'always',
                 },
             },
         ],
         'react/jsx-filename-extension': [1, {extensions: ['.js', '.tsx']}],
-        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 0,
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/triple-slash-reference': 'off',

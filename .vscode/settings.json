@@ -1,6 +1,6 @@
 {
     "editor.codeActionsOnSave": {
-        // "source.fixAll.eslint": true
+        "source.fixAll.eslint": true
     },
     "eslint.options": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
@@ -12,5 +12,6 @@
         "vue",
         "typescript",
         "typescriptreact"
-    ]
+    ],
+    "stylelint.validate": ["css", "less", "scss", "vue"]
 }

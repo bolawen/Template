@@ -13,13 +13,8 @@
         "postinstall": "husky install",
         "prettier": "prettier --write src/**/*.{ts,tsx}",
         "stylelint-fix": "stylelint src/**/*.scss --fix",
-        "eslint-fix": "eslint --ext .jsx,.js,.ts,.tsx src/ --fix",
+        "eslint-fix": "eslint src --ext .jsx,.js,.ts,.tsx --fix",
         "commitlint": "commitlint --config commitlint.config.js -e -V"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
     },
     "devDependencies": {
         "@commitlint/cli": "^16.2.4",
