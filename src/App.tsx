@@ -8,9 +8,6 @@ function App() {
     return (
         <div>
             <h3>{title}</h3>
-            <div>
-                kkkkkkkkkkkkfdfdfdkkkkkfdfdfdifjdifjdisfjidsjfidsjfidsjfidsjfidjs
-            </div>
             <img src={logo} alt="" />
         </div>
     );
