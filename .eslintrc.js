@@ -60,6 +60,10 @@ module.exports = {
         '@typescript-eslint/triple-slash-reference': 'off',
         'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+        'import/no-extraneous-dependencies': [
+            'error',
+            {devDependencies: ['vite.config.ts']},
+        ],
     },
     settings: {
         react: {
